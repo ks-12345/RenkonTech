@@ -1,16 +1,86 @@
-# React + Vite
+# Renkontech Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto frontend desenvolvido com **React**, **Vite** e **Firebase**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tecnologias Utilizadas
 
-## React Compiler
+* **React**
+* **Vite**
+* **Firebase**
+* **React Router**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📋 Pré-requisitos
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Certifique-se de ter o **Node.js** (com **npm**) e o **Git** instalados na sua máquina.
+
+Para verificar se estão instalados, execute no terminal ou PowerShell:
+
+```bash
+node -v
+npm -v
+git --version
+
+```
+
+---
+
+## 🚀 Como Executar o Projeto
+
+### 1. Clonar o Repositório
+
+```bash
+git clone https://github.com/ks-12345/RenkonTech.git
+cd renkontech-site
+
+```
+
+### 2. Instalar as Dependências
+
+```bash
+npm install
+
+```
+
+Este comando instalará todas as dependências declaradas no `package.json`.
+
+### 3. Configurar as Variáveis de Ambiente
+
+Crie um arquivo chamado `.env` na raiz do projeto:
+
+```text
+renkontech-site
+├── src/
+├── .env          <-- Criar este arquivo
+├── .gitignore
+├── package.json
+└── README.md
+
+```
+
+Adicione as configurações do seu projeto Firebase dentro do `.env`:
+
+```env
+VITE_FIREBASE_API_KEY=sua_chave
+VITE_FIREBASE_AUTH_DOMAIN=renkon-tech.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=renkon-tech
+VITE_FIREBASE_STORAGE_BUCKET=seu_storage_bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=seu_messaging_sender_id
+VITE_FIREBASE_APP_ID=seu_app_id
+VITE_FIREBASE_MEASUREMENT_ID=seu_measurement_id
+
+```
+
+> ⚠️ **Atenção:** O arquivo `.env` contém credenciais e não deve ser commitado no GitHub. Certifique-se de que ele esteja incluído no arquivo `.gitignore`.
+
+### 4. Iniciar o Servidor de Desenvolvimento
+
+```bash
+npm run dev
+
+```
+
+O Vite indicará o endereço local no terminal (normalmente `http://localhost:5173/`). Abra a URL no seu navegador para visualizar a aplicação.
